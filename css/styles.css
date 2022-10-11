@@ -51,7 +51,6 @@ h1, h2, h3, p {
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
-outline: 2px solid tomato ;
 }
 .section {
     padding-top: 94px;
@@ -102,10 +101,33 @@ line-height: 1.14;
 letter-spacing: 0.02em;
 display: flex;
 align-items:center;
-transition-property: background-color;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.current {
+    color:var(--text-color);
+    font-weight: 500;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.02em;
+display: block;
+position: relative;
+}
+.current::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -33px;
+    width: 0%;
+    height: 4px;
+    background-color: #2196F3;
+    border-radius: 2px;
+    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.current:hover::after{
+   width: 100%;
+}
+
 .komanda-sm-one {
     padding-right: 10px;
     color: var(--text-color);
@@ -115,6 +137,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 .komanda-sm-one:focus {
     color: var(--acsent-color);
 }
+
 .nav-link .current { 
     color: #000000;
 }
@@ -125,9 +148,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
-transition-property: background-color;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link-head:hover,.nav-link-head:focus
@@ -141,9 +162,7 @@ line-height: 1.14;
 letter-spacing: 0.02em;
 display: flex;
 align-items:center;
-transition-property: background-color;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link-tel:hover,  .nav-link-tel:focus {
     color: var(--acsent-color);
@@ -262,11 +281,9 @@ font-family: 'Roboto';
 line-height: 1.71;
 letter-spacing: 0.03em;
 color: rgba(255, 255, 255, 0.6);
-transition-property: background-color;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .contack:hover, .contack:focus  {
     color: var(--acsent-color);
 }
@@ -295,15 +312,14 @@ margin:0 auto;
 min-width: 216px;
 padding: 10px 32px;
 border: 2px solid transparent;
-transition-property: background-color;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
 .button {
-    color: var(--title-text-color);
-    background-color: var(--fon-komanda-color);
-    font-family: 'Roboto';
+color: var(--title-text-color);
+background-color: var(--fon-komanda-color);
+font-family: 'Roboto';
 font-weight: 500;
 font-size: 16px;
 line-height: 1.62;
@@ -317,9 +333,6 @@ border: 2px solid transparent;
 display: inline-flex;
 align-items: center;
 justify-content: center;
-transition-property: background-color;
-transition-duration: 1000ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-all {
@@ -339,9 +352,8 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        transition-property: background-color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1), 
+        color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .prioritet-titel {
@@ -450,9 +462,8 @@ color:var(--text-color);
     align-items: center;
     justify-content: center;
     color: #AFB1B8;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);   
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);   
    }
 
 .komanda-sm {
@@ -497,9 +508,8 @@ color: #FFFFFF;
     justify-content: center;
     border-radius: 4px;
     color: #AFB1B8;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);            
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);            
 }
 .company {
     fill: currentColor;
@@ -537,9 +547,7 @@ border-radius: 0px 0px 4px 4px;
     font-style: normal;
 background: #FFFFFF;
 border: 1px solid #EEEEEE;
-transition-property: background-color;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .border-one:hover, .border-one:focus {
@@ -576,9 +584,8 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 
 .button {
     fill: currentColor;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .button:hover, 
   .button:focus {
@@ -597,9 +604,8 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
 
 .komanda-sm {
