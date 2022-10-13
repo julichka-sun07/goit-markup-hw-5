@@ -67,19 +67,30 @@ h1, h2, h3, p {
 .header-navigation {
     display: flex;
     align-items: center;
-    
-}
+  }
 .header-container {
     display: flex;
     align-items: center;
-
     }
+
+    .header-container-one {
+        display: flex;
+        align-items: center;}
+
+.header-container-one::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    left: 0px;
+    top: 80px;
+    border: 1px solid #ECECEC;
+}
 
 .page-header {
     background-color:#FFFFFF;
     padding-top: 24px;
     padding-bottom: 25px;
-
     }
 
 .nav-links {
@@ -94,7 +105,7 @@ margin-right: 93px;
 
 }
 .nav-link { 
-    color:var(--text-color);
+    color:black;
     font-weight: 500;
 font-size: 14px;
 line-height: 1.14;
@@ -103,8 +114,9 @@ display: flex;
 align-items:center;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .current {
-    color:var(--text-color);
+    color:black;
     font-weight: 500;
 font-size: 14px;
 line-height: 1.14;
@@ -118,22 +130,26 @@ position: relative;
     position: absolute;
     left: 0;
     bottom: -33px;
-    width: 0%;
-    height: 4px;
+    width: 100%;
+    height: 5px;
     background-color: #2196F3;
     border-radius: 2px;
-    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.current:hover::after{
-   width: 100%;
+  }
+
+.icon {
+    color: var(--text-color);
 }
 
-.komanda-sm-one {
+.icon:hover {
+    color: var(--acsent-color);
+}
+  .komanda-sm-one {
     padding-right: 10px;
     color: var(--text-color);
 }
 
-.nav-link:hover, .nav-link:focus, .komanda-sm-one:hover, 
+.nav-link:hover, .nav-link:focus, 
+.komanda-sm-one:hover, 
 .komanda-sm-one:focus {
     color: var(--acsent-color);
 }
@@ -397,6 +413,7 @@ color:var(--text-color);
     gap: 8px;
     justify-content: center;
     margin-bottom: 50px;
+    
 }
 .komanda-text {
     padding-top: 30px;
@@ -684,8 +701,8 @@ background: rgba(47, 48, 58, 0.8);
 
 }
 .modal {
-    width: 500px;
-    min-height: 500px;
+    width: 528px;
+    min-height: 581px;
     background-color: #FFFFFF;
     position: absolute;
     top: 50%;
